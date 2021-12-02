@@ -1,0 +1,45 @@
+{% extends "./base.html" %}
+{% block title %} Gestion de Cursos {% endblock %}
+{% block body %}
+
+    <div class="row" >
+        <div class="col-sm12 col-md-6 col-lg-8 col-xl-8">
+            <h1>Calificaciones</h1>
+            <div class="table-responsive">
+                <table id="ejemplo" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Alumno</th>
+                            <th>Curso</th>
+                            <th>Creditos</th>
+                            <th>Nota</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for ac in alucur %}
+                        <tr class="row2">
+                            <td>{{ac.codalu}} {{ac.codalu.apealu}}</td>
+                            <td>{{ac.codcur}}</td>
+                            <td class="cred">{{ac.codcur.credcur}}</td>
+                            <td class="nota">{{ac.notacur}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th>Promedio</th>
+                            <th class="label1"></th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+
+    
+
+{% endblock %}
+
